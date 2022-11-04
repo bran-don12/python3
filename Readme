@@ -1,0 +1,1 @@
+define un método, que debe usarse para crear objetos en lugar de usar una llamada directa al constructor ( newoperador). Las subclases pueden anular este método para cambiar la clase de objetos que se crearán.
