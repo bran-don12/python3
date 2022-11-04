@@ -1,0 +1,3 @@
+es un patrón de diseño de comportamiento que convierte un conjunto de comportamientos en objetos y los hace intercambiables dentro del objeto de contexto original.
+
+El objeto original, llamado contexto, contiene una referencia a un objeto de estrategia. El contexto

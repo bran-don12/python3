@@ -1,0 +1,66 @@
+ def  estrategia ( self ) - > Estrategia : """         El contexto mantiene una referencia a uno de los objetos de estrategia. El         Contexto no conoce la clase concreta de una estrategia. Debería funcionar         con todas las estrategias a través de la interfaz de Estrategia.         """ return self . _strategy @ estrategia . setter def estrategia ( self , estrategia : Estrategia  
+        
+
+
+
+
+
+         
+
+    
+       ) - > Ninguno : """         Por lo general, el contexto permite reemplazar un objeto de estrategia en tiempo de ejecución.         """ self . _estrategia = estrategia def do_some_business_logic ( self ) - > Ninguno : """         El Contexto delega parte del trabajo al objeto Estrategia en lugar de         implementar múltiples versiones del algoritmo por sí mismo.         """ # ... print ( "Contexto: Clasificación de datos usando la estrategia (no estoy seguro de cómo lo hará)"  
+        
+
+
+
+          
+
+       
+        
+
+
+
+
+        
+
+        
+          _estrategia . do_algorithm ( [ "a" , "b" , "c" , "d" , "e" ] ) imprimir ( "," . unir ( resultado ) ) # ... estrategia de clase ( ABC ) : """     La estrategia La interfaz declara operaciones comunes a todas las versiones soportadas     de algún algoritmo.     El contexto usa esta interfaz para llamar al algoritmo definido por Concrete     Strategies.     """    
+        
+
+        
+
+
+ 
+    
+
+
+
+
+
+
+
+    
+     do_algorithm ( self , data : List ) : pass """ Concrete Strategies implementa el algoritmo mientras sigue la interfaz de estrategia base . La interfaz los hace intercambiables en el Contexto. """ class ConcreteStrategyA ( Estrategia ) : def do_algorithm ( self , data : List ) - > List : return sorted ( data ) clase ConcreteStrategyB ( Estrategia  
+        
+
+
+
+
+
+
+
+
+ 
+         
+         
+
+
+ ) : def do_algorithm ( self , data : List ) - > List : return reversed ( sorted ( data ) ) if __name__ == "__main__" : # El código del cliente elige una estrategia concreta y la pasa al contexto. # El cliente debe ser consciente de las diferencias entre las estrategias para # tomar la decisión correcta. contexto = Contexto ( EstrategiaConcretaA ( ) ) imprimir (
+         
+         
+
+
+   
+    
+    
+    
